@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  padding: 0;
+}
+
+header, section {
+  padding: 2em;
+}
+
+header {
+  height: 150px;
+  background-color: #f00;
+  padding-top: 200px;
+}
+
+nav {
+  overflow: hidden;
+  ol {
+    float: right;
+    overflow: hidden;
+    margin: auto;
+    li {
+      display: block;
+      float: left;
+
+      a {
+        display: block;
+        padding: 1em;
+      }
+    }
+  }
+}
