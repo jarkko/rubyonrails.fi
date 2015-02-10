@@ -1,0 +1,35 @@
+/* line 3, /Users/jarkko/Sites/rubyonrails.fi/source/stylesheets/all.css.scss */
+body {
+  margin: 0; }
+
+/* line 7, /Users/jarkko/Sites/rubyonrails.fi/source/stylesheets/all.css.scss */
+ol, ul {
+  list-style: none;
+  padding: 0; }
+
+/* line 12, /Users/jarkko/Sites/rubyonrails.fi/source/stylesheets/all.css.scss */
+header, section {
+  padding: 2em; }
+
+/* line 16, /Users/jarkko/Sites/rubyonrails.fi/source/stylesheets/all.css.scss */
+header {
+  height: 150px;
+  background-color: #f00;
+  padding-top: 200px; }
+
+/* line 22, /Users/jarkko/Sites/rubyonrails.fi/source/stylesheets/all.css.scss */
+nav {
+  overflow: hidden; }
+  /* line 24, /Users/jarkko/Sites/rubyonrails.fi/source/stylesheets/all.css.scss */
+  nav ol {
+    float: right;
+    overflow: hidden;
+    margin: auto; }
+    /* line 28, /Users/jarkko/Sites/rubyonrails.fi/source/stylesheets/all.css.scss */
+    nav ol li {
+      display: block;
+      float: left; }
+      /* line 32, /Users/jarkko/Sites/rubyonrails.fi/source/stylesheets/all.css.scss */
+      nav ol li a {
+        display: block;
+        padding: 1em; }
