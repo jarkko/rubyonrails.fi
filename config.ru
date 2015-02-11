@@ -1,17 +1,13 @@
-require 'rubygems'
-require 'bundler'
-Bundler.setup
-require 'middleman'
-require 'middleman-core/preview_server'
+require 'middleman-core/load_paths'
+::Middleman.setup_load_paths
 
-module Middleman::PreviewServer
-  def self.preview_in_rack
-    @options = {}
-    @app = new_app
-    start_file_watcher
-  end
-end
+require 'middleman-core'
+require 'middleman-core/rack'
 
-Middleman::PreviewServer.preview_in_rack
+require 'fileutils'
+FileUtils.mkdir('log') unless File.exist?('log')
+::Middleman::Logger.singleton("log/#{ENV['RACK_ENV']}.log")
 
-run Middleman::PreviewServer.app
+app = ::Middleman::Application.new
+
+run ::Middleman::Rack.new(app).to_app
